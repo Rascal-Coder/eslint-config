@@ -11,7 +11,7 @@
     "test": "pnpm -r run test",
     "pub": "pnpm -r publish --access public",
     "update-version": "bumpp package.json packages/*/package.json --commit --push --tag",
-    "release": " update-version && pnpm pub"
+    "release": "pnpm update-version && pnpm pub"
   },
   "devDependencies": {
     "bumpp": "^8.2.1",
