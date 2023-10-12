@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["rascal-base"],
+  extends: ["rascal-ts"],
 };

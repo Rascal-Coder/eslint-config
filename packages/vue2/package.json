@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-rascal-ts",
+  "name": "eslint-config-rascal-vue2",
   "version": "0.0.1",
-  "description": "RascalCoder's eslint config presets with prettier",
+  "description": "Rascal's vue2 eslint config presets with prettier",
   "author": "Rascal-Coder <meno.qiqio@gmail.com> (https://github.com/Rascal-Coder)",
   "license": "MIT",
   "main": "index.js",
@@ -9,9 +9,8 @@
     "lint": "eslint . --config=index.js"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.35.1",
-    "@typescript-eslint/parser": "^5.35.1",
-    "eslint-config-rascal-base": "workspace:*"
+    "eslint-config-rascal-ts": "workspace:*",
+    "eslint-plugin-vue": "^9.4.0"
   },
   "peerDependencies": {
     "eslint": ">=7.4.0"
