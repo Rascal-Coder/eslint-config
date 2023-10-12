@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-rascal-react",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Rascal's react eslint config presets with prettier",
   "author": "Rascal-Coder <meno.qiqio@gmail.com> (https://github.com/Rascal-Coder)",
   "license": "MIT",
