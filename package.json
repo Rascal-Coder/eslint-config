@@ -11,12 +11,14 @@
     "test": "pnpm -r run test",
     "pub": "pnpm -r publish --access public",
     "update-version": "bumpp package.json packages/*/package.json --commit --push --tag",
-    "release": "pnpm update-version && pnpm pub"
+    "release": "pnpm update-version && pnpm pub",
+    "sync": "node ./scripts/sync.mjs"
   },
   "devDependencies": {
     "bumpp": "^8.2.1",
     "eslint": "^8.22.0",
     "eslint-config-rascal-ts": "workspace:*",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "zx": "^7.0.8"
   }
 }
