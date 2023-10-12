@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-rascal",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Rascal's eslint config presets with prettier, it equal to rascal-ts",
   "author": "Rascal-Coder <meno.qiqio@gmail.com> (https://github.com/Rascal-Coder)",
   "license": "MIT",
