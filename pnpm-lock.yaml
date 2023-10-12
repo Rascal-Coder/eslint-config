@@ -12,13 +12,13 @@ importers:
         specifier: ^8.2.1
         version: 8.2.1
       eslint:
-        specifier: ^8.22.0
+        specifier: ^8.23.0
         version: 8.51.0
       eslint-config-rascal-ts:
         specifier: workspace:*
         version: link:packages/ts
       typescript:
-        specifier: ^4.7.4
+        specifier: ^4.8.2
         version: 4.9.5
       zx:
         specifier: ^7.0.8
@@ -70,7 +70,7 @@ importers:
         version: 1.2.2
     devDependencies:
       eslint:
-        specifier: ^8.22.0
+        specifier: ^8.23.0
         version: 8.51.0
 
   packages/rascal:
@@ -80,7 +80,7 @@ importers:
         version: link:../ts
     devDependencies:
       eslint:
-        specifier: ^8.22.0
+        specifier: ^8.23.0
         version: 8.51.0
 
   packages/react:
@@ -96,7 +96,7 @@ importers:
         version: 4.6.0(eslint@8.51.0)
     devDependencies:
       eslint:
-        specifier: ^8.22.0
+        specifier: ^8.23.0
         version: 8.51.0
 
   packages/ts:
@@ -112,7 +112,7 @@ importers:
         version: link:../base
     devDependencies:
       eslint:
-        specifier: ^8.22.0
+        specifier: ^8.23.0
         version: 8.51.0
       typescript:
         specifier: ^4.7.4
@@ -128,7 +128,7 @@ importers:
         version: 9.17.0(eslint@8.51.0)
     devDependencies:
       eslint:
-        specifier: ^8.22.0
+        specifier: ^8.23.0
         version: 8.51.0
 
   packages/vue2:
@@ -141,7 +141,7 @@ importers:
         version: 9.17.0(eslint@8.51.0)
     devDependencies:
       eslint:
-        specifier: ^8.22.0
+        specifier: ^8.23.0
         version: 8.51.0
 
 packages:
