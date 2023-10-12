@@ -1,20 +1,22 @@
-# eslint-config-rascal-vue2
+# eslint-config-rascal
 
-## Rascal's vue2 eslint config presets extends ts config
+## Rascal's eslint config presets with prettier
+
+it equal to rascal-ts
 
 ## Usage
 
 ### Install
 
 ```bash
-pnpm add -D eslint eslint-config-rascal-vue2
+pnpm add -D eslint eslint-config-rascal
 ```
 
 ### Config eslint (.eslintrc | .eslintrc.js | .eslintrc.json)
 
 ```json
 {
-  "extends": "rascal-vue2"
+  "extends": "rascal"
 }
 ```
 

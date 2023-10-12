@@ -1,141 +1,164 @@
-const { markdownCodeRules } = require('./rules');
+const { markdownCodeRules } = require("./rules");
 
 module.exports = {
   root: true,
   parserOptions: {
     ecmaVersion: 2022,
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
-    sourceType: 'module'
+    sourceType: "module",
   },
   env: {
     browser: true,
     node: true,
     commonjs: true,
-    es2022: true
+    es2022: true,
   },
   extends: [
-    './rules/all.js',
-    'plugin:import/recommended',
-    'plugin:jsonc/recommended-with-jsonc',
-    'plugin:md/recommended',
-    'plugin:yml/standard'
+    "./rules/all.js",
+    "plugin:n/recommended",
+    "plugin:promise/recommended",
+    "plugin:import/recommended",
+    "plugin:jsonc/recommended-with-jsonc",
+    "plugin:md/recommended",
+    "plugin:yml/standard",
   ],
   // plugins: [],
   ignorePatterns: [
-    'node_modules',
-    '*.min.*',
-    'CHANGELOG.md',
-    'dist',
-    'LICENSE*',
-    'output',
-    'coverage',
-    'public',
-    'temp',
-    'package-lock.json',
-    'pnpm-lock.yaml',
-    'yarn.lock',
-    '__snapshots__',
-    '!.github',
-    '!.vitepress',
-    '!.vscode'
+    "node_modules",
+    "*.min.*",
+    "CHANGELOG.md",
+    "dist",
+    "LICENSE*",
+    "output",
+    "coverage",
+    "public",
+    "temp",
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    "yarn.lock",
+    "__snapshots__",
+    "!.github",
+    "!.vitepress",
+    "!.vscode",
   ],
   settings: {
-    'import/resolver': {
+    "import/resolver": {
       alias: {
         map: [
-          ['~', '.'],
-          ['@', './src']
+          ["~", "."],
+          ["@", "./src"],
         ],
-        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', 'mts', '.d.ts']
-      }
-    }
+        extensions: [".js", ".jsx", ".mjs", ".ts", ".tsx", "mts", ".d.ts"],
+      },
+    },
   },
   overrides: [
     {
-      files: ['*.json', '*.json5', '*.jsonc'],
-      parser: 'jsonc-eslint-parser'
+      files: ["*.json", "*.json5", "*.jsonc"],
+      parser: "jsonc-eslint-parser",
     },
     {
-      files: ['package.json'],
-      parser: 'jsonc-eslint-parser',
+      files: ["package.json"],
+      parser: "jsonc-eslint-parser",
       rules: {
-        'jsonc/sort-keys': [
-          'error',
+        "jsonc/sort-keys": [
+          "error",
           {
-            pathPattern: '^$',
+            pathPattern: "^$",
             order: [
-              'publisher',
-              'name',
-              'displayName',
-              'type',
-              'version',
-              'private',
-              'packageManager',
-              'description',
-              'author',
-              'license',
-              'funding',
-              'homepage',
-              'repository',
-              'bugs',
-              'keywords',
-              'categories',
-              'sideEffects',
-              'exports',
-              'main',
-              'module',
-              'unpkg',
-              'jsdelivr',
-              'types',
-              'typesVersions',
-              'bin',
-              'icon',
-              'files',
-              'engines',
-              'activationEvents',
-              'contributes',
-              'scripts',
-              'dependencies',
-              'peerDependencies',
-              'peerDependenciesMeta',
-              'optionalDependencies',
-              'devDependencies',
-              'pnpm',
-              'overrides',
-              'resolutions',
-              'husky',
-              'simple-git-hooks',
-              'lint-staged',
-              'eslintConfig'
-            ]
+              "publisher",
+              "name",
+              "displayName",
+              "type",
+              "version",
+              "private",
+              "packageManager",
+              "description",
+              "author",
+              "license",
+              "funding",
+              "homepage",
+              "repository",
+              "bugs",
+              "keywords",
+              "categories",
+              "sideEffects",
+              "exports",
+              "main",
+              "module",
+              "unpkg",
+              "jsdelivr",
+              "types",
+              "typesVersions",
+              "bin",
+              "icon",
+              "files",
+              "engines",
+              "activationEvents",
+              "contributes",
+              "scripts",
+              "dependencies",
+              "peerDependencies",
+              "peerDependenciesMeta",
+              "optionalDependencies",
+              "devDependencies",
+              "pnpm",
+              "overrides",
+              "resolutions",
+              "husky",
+              "simple-git-hooks",
+              "lint-staged",
+              "eslintConfig",
+            ],
           },
           {
-            pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
-            order: { type: 'asc' }
+            pathPattern: "^(?:dev|peer|optional|bundled)?[Dd]ependencies$",
+            order: { type: "asc" },
           },
           {
-            pathPattern: '^exports.*$',
-            order: ['types', 'require', 'import']
-          }
-        ]
-      }
+            pathPattern: "^exports.*$",
+            order: ["types", "require", "import"],
+          },
+        ],
+      },
     },
     {
-      files: ['*.md'],
-      parser: 'markdown-eslint-parser',
+      files: ["*.md"],
+      parser: "markdown-eslint-parser",
       rules: {
-        'prettier/prettier': ['error', { parser: 'markdown' }]
-      }
+        "prettier/prettier": ["error", { parser: "markdown" }],
+      },
     },
     {
-      files: ['*.md.js', '*.md.javascript', '*.md.json'],
-      rules: markdownCodeRules
+      files: ["*.md.js", "*.md.javascript", "*.md.json"],
+      rules: markdownCodeRules,
     },
     {
-      files: ['*.yaml', '*.yml'],
-      parser: 'yaml-eslint-parser'
-    }
-  ]
+      files: ["*.yaml", "*.yml"],
+      parser: "yaml-eslint-parser",
+    },
+  ],
+  rules: {
+    // import
+    "import/no-mutable-exports": "error",
+
+    // md
+    "md/remark": [
+      "error",
+      {
+        plugins: [
+          "remark-preset-lint-markdown-style-guide",
+          ["lint-maximum-line-length", false],
+          ["remark-lint-table-pipe-alignment", false],
+          ["remark-lint-list-item-indent", "space"],
+        ],
+      },
+    ],
+
+    // yml
+    "yml/quotes": ["error", { prefer: "single", avoidEscape: false }],
+    "yml/no-empty-document": "off",
+  },
 };

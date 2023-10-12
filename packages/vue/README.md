@@ -1,4 +1,4 @@
-# eslint-config-soybeanjs-vue
+# eslint-config-rascal-vue
 
 ## Rascal's vue3 eslint config presets extends ts config
 
