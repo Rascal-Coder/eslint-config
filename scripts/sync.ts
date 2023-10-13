@@ -7,4 +7,8 @@ const pkgs = ['base', 'ts', 'vue', 'vue2', 'react'];
 
 const requestUrls = pkgs.map(item => requestUrl + (item ? `-${item}` : ''));
 
-await Promise.all(requestUrls.map(url => fetch(url)));
+async function fetchData() {
+  await Promise.all(requestUrls.map(url => fetch(url)));
+}
+
+fetchData();
