@@ -17,14 +17,9 @@
   },
   "devDependencies": {
     "bumpp": "^8.2.1",
-    "eslint": "^8.23.0",
-    "eslint-config-rascal-ts": "workspace:*",
-    "typescript": "^4.8.2",
+    "eslint": "^8.23.1",
+    "eslint-config-rascal": "workspace:*",
+    "typescript": "^4.8.3",
     "zx": "^7.0.8"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pnpm lint"
-    }
   }
 }

@@ -152,7 +152,7 @@ module.exports = {
   rules: {
     // import
     "import/no-mutable-exports": "error",
-
+    'import/no-named-as-default': 'off',
     // md
     "md/remark": [
       "error",

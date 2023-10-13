@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["rascal-ts"],
+  extends: ["rascal"],
   settings: {
     "import/core-modules": ["zx"],
   },

@@ -16,6 +16,12 @@ module.exports = {
       parser: "@typescript-eslint/parser",
     },
     {
+      files: ['*.js', '*.cjs', 'cts'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off'
+      }
+    },
+    {
       files: ["*.md.ts", "*.md.typescript"],
       rules: {
         ...baseRules.markdownCodeRules,

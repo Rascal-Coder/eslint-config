@@ -1,6 +1,6 @@
 # eslint-config-rascal-vue
 
-## Rascal's vue3 eslint config presets extends ts config
+## Rascal's Vue3 eslint config presets extends ts config
 
 ## Usage
 

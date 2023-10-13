@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-rascal-vue",
   "version": "0.0.7",
-  "description": "RascalCoder's vue3 eslint config presets with prettier",
+  "description": "RascalCoder's Vue3 eslint config presets with prettier",
   "author": "Rascal-Coder <meno.qiqio@gmail.com> (https://github.com/Rascal-Coder)",
   "license": "MIT",
   "main": "index.js",
@@ -16,6 +16,6 @@
     "eslint": ">=7.4.0"
   },
   "devDependencies": {
-    "eslint": "^8.23.0"
+    "eslint": "^8.23.1"
   }
 }

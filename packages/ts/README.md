@@ -1,6 +1,6 @@
 # eslint-config-rascal-ts
 
-## Rascal's ts eslint config presets extends base config
+## Rascal's TypeScript eslint config presets extends base config
 
 - Auto fix for formatting with prettier
 - lint js

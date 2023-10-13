@@ -1,6 +1,6 @@
 # eslint-config-Rascal-react
 
-## rascal's react eslint config presets
+## Rascal's React eslint config presets
 
 this config extends ts config
 
