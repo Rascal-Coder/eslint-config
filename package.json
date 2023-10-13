@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-rascal-monorepo",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "private": true,
   "description": "RascalCoder's eslint config presets with prettier",
   "author": {
