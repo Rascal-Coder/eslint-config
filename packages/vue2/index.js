@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["plugin:vue/recommended", "rascal-ts"],
+  extends: ['plugin:vue/recommended', 'rascal-ts'],
   overrides: [
     {
       files: ['*.vue'],
