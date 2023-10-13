@@ -2,28 +2,37 @@ module.exports = {
   extends: ["plugin:vue/vue3-recommended", "rascal-ts"],
   overrides: [
     {
-      files: ["*.vue"],
-      parser: "vue-eslint-parser",
+      files: ['*.vue'],
+      parser: 'vue-eslint-parser',
       parserOptions: {
-        parser: "@typescript-eslint/parser",
+        parser: {
+          js: 'espree',
+          jsx: 'espree',
+          ts: '@typescript-eslint/parser',
+          tsx: '@typescript-eslint/parser'
+        },
+        extraFileExtensions: ['.vue'],
+        ecmaFeatures: {
+          jsx: true
+        }
       },
       rules: {
-        "no-undef": "off",
-      },
+        'no-undef': 'off'
+      }
     },
     {
-      files: ["*.html"],
+      files: ['*.html'],
       rules: {
-        "vue/comment-directive": "off",
-      },
-    },
+        'vue/comment-directive': 'off'
+      }
+    }
   ],
   rules: {
-    "vue/multi-word-component-names": [
-      "error",
+    'vue/multi-word-component-names': [
+      'error',
       {
-        ignores: ["index"],
-      },
-    ],
-  },
+        ignores: ['index']
+      }
+    ]
+  }
 };

@@ -9,17 +9,18 @@
     "prepare": "pnpm -r run stub",
     "lint": "eslint . --fix",
     "test": "pnpm -r run test",
-    "pub": "pnpm -r publish --access public",
+    "publish-pkg": "pnpm -r publish --access public",
     "update-version": "bumpp package.json packages/*/package.json --commit --push --tag",
-    "release": "pnpm update-version && pnpm pub",
+    "release": "pnpm update-version && pnpm publish-pkg",
     "sync": "node ./scripts/sync.mjs",
     "init-husky": "pnpm husky install"
   },
   "devDependencies": {
     "bumpp": "^8.2.1",
-    "eslint": "^8.23.1",
+    "eslint": "^8.26.0",
     "eslint-config-rascal": "workspace:*",
-    "typescript": "^4.8.3",
-    "zx": "^7.0.8"
+    "husky": "^8.0.1",
+    "typescript": "^4.8.4",
+    "zx": "^7.1.1"
   }
 }

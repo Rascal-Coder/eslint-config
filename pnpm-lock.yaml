@@ -12,23 +12,26 @@ importers:
         specifier: ^8.2.1
         version: 8.2.1
       eslint:
-        specifier: ^8.23.1
+        specifier: ^8.26.0
         version: 8.51.0
       eslint-config-rascal:
         specifier: workspace:*
         version: link:packages/rascal
+      husky:
+        specifier: ^8.0.1
+        version: 8.0.3
       typescript:
-        specifier: ^4.8.3
+        specifier: ^4.8.4
         version: 4.9.5
       zx:
-        specifier: ^7.0.8
+        specifier: ^7.1.1
         version: 7.2.3
 
   packages/base:
     dependencies:
       '@html-eslint/parser':
-        specifier: ^0.13.2
-        version: 0.13.2
+        specifier: ^0.15.0
+        version: 0.15.0
       eslint-config-prettier:
         specifier: ^8.5.0
         version: 8.10.0(eslint@8.51.0)
@@ -48,16 +51,16 @@ importers:
         specifier: ^1.0.19
         version: 1.0.19
       eslint-plugin-n:
-        specifier: ^15.2.5
+        specifier: ^15.3.0
         version: 15.7.0(eslint@8.51.0)
       eslint-plugin-prettier:
         specifier: ^4.2.1
         version: 4.2.1(eslint-config-prettier@8.10.0)(eslint@8.51.0)(prettier@2.8.8)
       eslint-plugin-promise:
-        specifier: ^6.0.1
+        specifier: ^6.1.1
         version: 6.1.1(eslint@8.51.0)
       eslint-plugin-yml:
-        specifier: ^1.1.0
+        specifier: ^1.2.0
         version: 1.10.0(eslint@8.51.0)
       markdown-eslint-parser:
         specifier: ^1.2.1
@@ -70,7 +73,7 @@ importers:
         version: 1.2.2
     devDependencies:
       eslint:
-        specifier: ^8.23.0
+        specifier: ^8.26.0
         version: 8.51.0
 
   packages/rascal:
@@ -89,33 +92,33 @@ importers:
         specifier: workspace:*
         version: link:../ts
       eslint-plugin-react:
-        specifier: ^7.31.1
+        specifier: ^7.31.10
         version: 7.33.2(eslint@8.51.0)
       eslint-plugin-react-hooks:
         specifier: ^4.6.0
         version: 4.6.0(eslint@8.51.0)
     devDependencies:
       eslint:
-        specifier: ^8.23.0
+        specifier: ^8.26.0
         version: 8.51.0
 
   packages/ts:
     dependencies:
       '@typescript-eslint/eslint-plugin':
-        specifier: ^5.37.0
+        specifier: ^5.40.1
         version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.51.0)(typescript@4.9.5)
       '@typescript-eslint/parser':
-        specifier: ^5.37.0
+        specifier: ^5.40.1
         version: 5.62.0(eslint@8.51.0)(typescript@4.9.5)
       eslint-config-rascal-base:
         specifier: workspace:*
         version: link:../base
     devDependencies:
       eslint:
-        specifier: ^8.23.1
+        specifier: ^8.26.0
         version: 8.51.0
       typescript:
-        specifier: ^4.8.3
+        specifier: ^4.8.4
         version: 4.9.5
 
   packages/vue:
@@ -124,11 +127,11 @@ importers:
         specifier: workspace:*
         version: link:../ts
       eslint-plugin-vue:
-        specifier: ^9.4.0
+        specifier: ^9.6.0
         version: 9.17.0(eslint@8.51.0)
     devDependencies:
       eslint:
-        specifier: ^8.23.1
+        specifier: ^8.26.0
         version: 8.51.0
 
   packages/vue2:
@@ -137,11 +140,11 @@ importers:
         specifier: workspace:*
         version: link:../ts
       eslint-plugin-vue:
-        specifier: ^9.4.0
+        specifier: ^9.6.0
         version: 9.17.0(eslint@8.51.0)
     devDependencies:
       eslint:
-        specifier: ^8.23.1
+        specifier: ^8.26.0
         version: 8.51.0
 
 packages:
@@ -205,9 +208,11 @@ packages:
     resolution: {integrity: sha512-HxjQ8Qn+4SI3/AFv6sOrDB+g6PpUTDwSJiQqOrnneEk8L71161srI9gjzzZvYVbzHiVg/BvcH95+cK/zfIt4pg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  /@html-eslint/parser@0.13.2:
-    resolution: {integrity: sha512-DESYDCWOo8JkpLCLpSgoTd437ReTxA955T//dGm7+dnW1UnVs6M2Axpd40smF7ucyBqjTUj7YaE/eMRjlLMoPg==}
+  /@html-eslint/parser@0.15.0:
+    resolution: {integrity: sha512-fA+HQtWnODhOIK6j1p4XWqltINx7hM0WNNTM2RvlH/2glzeRDCcYq3vEmeQhnytvGocidu4ofTzNk80cLnnyiw==}
     engines: {node: '>=8.10.0'}
+    dependencies:
+      es-html-parser: 0.0.8
     dev: false
 
   /@humanwhocodes/config-array@0.11.11:
@@ -923,6 +928,10 @@ packages:
       typed-array-length: 1.0.4
       unbox-primitive: 1.0.2
       which-typed-array: 1.1.11
+    dev: false
+
+  /es-html-parser@0.0.8:
+    resolution: {integrity: sha512-kjMH23xhvTBw/7Ve1Dtb/7yZdFajfvwOpdsgRHmnyt8yvTsDJnkFjUgEEaMZFW+e1OhN/eoZrvF9wehq+waTGg==}
     dev: false
 
   /es-iterator-helpers@1.0.15:
@@ -1753,6 +1762,12 @@ packages:
       domutils: 3.1.0
       entities: 4.5.0
     dev: false
+
+  /husky@8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
