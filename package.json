@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-rascal",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "description": "RascalCoder's eslint config presets with prettier",
   "author": {
