@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-rascal-monorepo",
+  "name": "eslint-config-rascal",
   "version": "0.1.0",
   "private": true,
   "description": "RascalCoder's eslint config presets with prettier",
@@ -16,29 +16,62 @@
   "bugs": {
     "url": "https://github.com/Rascal-Coder/eslint-config/issues"
   },
+  "files": [
+    "lib"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./vue": "./lib/configs/vue.js",
+    "./vue2": "./lib/configs/vue2.js",
+    "./react": "./lib/configs/react.js"
+  },
   "scripts": {
-    "cleanup": "esno ./scripts/cleanup.ts",
-    "commit": "rascal git-commit",
-    "esno": "esno",
     "lint": "eslint . --fix",
-    "update-pkg": "ncu --deep -u",
-    "update-version": "bumpp package.json packages/*/package.json",
+    "format": "ras prettier-format",
+    "commit": "ras git-commit",
+    "cleanup": "ras cleanup",
+    "update-pkg": "ras update-pkg",
+    "init-git": "ras init-git-hooks",
+    "tsx": "tsx",
+    "update-version": "bumpp --commit --push --tag",
     "publish-pkg": "pnpm -r publish --access public",
-    "release": "pnpm update-version && pnpm publish-pkg",
-    "sync-pkg": "esno ./scripts/sync.ts",
-    "prepare": "pnpm -r run stub && husky install"
+    "release": "pnpm update-version && pnpm publish-pkg"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "5.59.8",
+    "@typescript-eslint/parser": "5.59.8",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsonc": "2.8.0",
+    "eslint-plugin-n": "16.0.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-vue": "9.14.1",
+    "prettier": "2.8.8"
   },
   "devDependencies": {
-    "@rascaljs/cli": "^0.0.1",
-    "bumpp": "^8.2.1",
-    "eslint": "^8.26.0",
-    "eslint-config-rascal": "workspace:*",
-    "esno": "^0.16.3",
-    "husky": "^8.0.1",
-    "npm-check-updates": "^16.3.16",
-    "rimraf": "^3.0.2",
-    "tsup": "^6.3.0",
-    "typescript": "^4.8.4",
-    "zx": "^7.1.1"
-  }
+    "@rascaljs/cli": "0.4.0",
+    "@types/eslint": "8.40.0",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "bumpp": "9.1.0",
+    "eslint": "8.41.0",
+    "eslint-plugin-rascal": "link:",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "simple-git-hooks": "2.8.1",
+    "typescript": "5.0.4",
+    "vue": "3.3.4"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=4.8.0"
+  }, 
+  "simple-git-hooks": {
+    "commit-msg": "pnpm ras git-commit-verify",
+    "pre-commit": "pnpm lint && ras lint-staged"
+  } 
 }
