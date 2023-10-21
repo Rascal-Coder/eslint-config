@@ -82,3 +82,24 @@ For example:
   }
 }
 ```
+
+### VSCode settings for ESlint
+
+```json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "svelte",
+    "astro",
+    "json"
+  ]
+}
+```
