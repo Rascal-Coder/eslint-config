@@ -6,14 +6,13 @@
 - Reasonable defaults, best practices, only one-line of config
 - Default Alias mapping "@" => "src", "~" => "./"
 
-
 ## Usage
 
 ### Install
 
 ```bash
 pnpm add -D eslint
-pnpm add -D eslint-config-rascal 
+pnpm add -D eslint-config-rascal
 ```
 
 ### Config eslint (.eslintrc | .eslintrc.js | .eslintrc.json)
