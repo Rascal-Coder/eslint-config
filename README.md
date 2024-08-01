@@ -6,27 +6,6 @@
 - Reasonable defaults, best practices, only one-line of config
 - Default Alias mapping "@" => "src", "~" => "./"
 
-## Package
-
-### eslint-config-rascal
-
-this default config is equal to rascal-ts
-
-### eslint-config-rascal-base
-
-this is base config, lint for js, html, json, yaml, markdown
-
-### eslint-config-rascal-ts
-
-this config extends the base config, and it also lint for ts
-
-### eslint-config-rascal-vue
-
-this config extends the ts config, and it also lint for vue3
-
-### eslint-config-rascal-vue2
-
-this config extends the ts config, and it also lint for vue2
 
 ## Usage
 
@@ -34,19 +13,14 @@ this config extends the ts config, and it also lint for vue2
 
 ```bash
 pnpm add -D eslint
-pnpm add -D eslint-config-rascal # for ts
-pnpm add -D eslint-config-rascal-base # base
-pnpm add -D eslint-config-rascal-ts # for ts
-pnpm add -D eslint-config-rascal-vue # for vue3
-pnpm add -D eslint-config-rascal-vue2 # for vue2
-pnpm add -D eslint-config-rascal-react # for vue2
+pnpm add -D eslint-config-rascal 
 ```
 
 ### Config eslint (.eslintrc | .eslintrc.js | .eslintrc.json)
 
 ```json
 {
-  "extends": "rascal" // or rascal-base, rascal-ts, rascal-vue, rascal-vue2, rascal-react
+  "extends": "rascal" // or rascal/base, rascal/ts, rascal/vue, rascal/vue2, rascal/react
 }
 ```
 
@@ -88,7 +62,7 @@ For example:
 ```json
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.formatOnSave": false,
   "eslint.validate": [
@@ -97,8 +71,6 @@ For example:
     "typescript",
     "typescriptreact",
     "vue",
-    "svelte",
-    "astro",
     "json"
   ]
 }
